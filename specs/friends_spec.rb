@@ -61,7 +61,7 @@ class TestFriends < MiniTest::Test
       }
     }
 
-    @people = [@person1, @person2, @person3, @person4, @person5]
+   @people = [@person1, @person2, @person3, @person4, @person5]
 
   end
 
@@ -70,11 +70,16 @@ class TestFriends < MiniTest::Test
     result = get_name(@person5)
     assert_equal("Daphne", result)
   end
-
+  #
   # 2. For a given person, return their favourite tv show
+    def test_favourite_tv_show
+      result = get_tv_show(@person2)
+      assert_equal("Baywatch", result)
+    end
+
   # (e.g. the function favourite_tv_show(@person2) should return the string "Baywatch")
 
-
+  #
   # 3. For a given person, check if they like a particular food
   # (e.g. the function likes_to_eat(@person2, "bread") should return true, likes_to_eat(@person3, "spinach") should return false)
 
