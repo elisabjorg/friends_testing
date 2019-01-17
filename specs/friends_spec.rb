@@ -114,6 +114,12 @@ end
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
+def test_loan_money_1
+  result = get_loan_30_money(@person5, @person4, [:monies])
+  assert_equal(70, result)
+  assert_equal(50, result)
+end
+
 
 
   # 8. Find the set of everyone's favourite food joined together
